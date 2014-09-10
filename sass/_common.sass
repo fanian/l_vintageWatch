@@ -1,0 +1,335 @@
+// # SHORT HOWTO
+// ## Sprites
+//     .whatever
+//          +sized-sprite($icons, coderiver) //or
+// 			+s(codedby) //gets default value for spritemap as $icons
+// ### animation example
+//     +include keyframes(rotate)
+//        from
+//           +rotate(0)
+//        to
+//           +rotate(360)
+// ## animation usage
+//     body:hover
+// 	    +animation(rotate 200s linear infinite)
+// ## animations easing, see easings.net for full list and examples, tnx @ai
+//     transition: all 1.2s ceaser($ease-in)
+// ## gradient example
+//     +background-image(linear-gradient(#232323, #5c5c5c));
+//     +g(#232323, #5c5c5c);
+//	   horizontal
+//     +gh(#232323, #5c5c5c);
+// ## making bw-images
+//     img
+//			@extend %gray
+// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
+//     +min-screen(320)
+//			display: none
+// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
+//
+// ## use cycles
+//     @for $i from 1 through 3
+//       .item-#{$i}
+//			width: 2em * $i;
+//     @each $s in a,b,c
+// 	    	#{$s}
+//				display: none
+// ## fonts 
+// Save fonts to /css/fonts, after that write (eot, woff, ttf):
+// +font(book, cytiapro-black-webfont)  
+// =book
+// 	font-family: "book", Arial, sans-serif 
+// insert pics into css
+// div
+// 	+pic("blabla.png")
+// span
+// 	+png(blabla)
+// p
+// 	+jpg(bla)
+
+
+//body
+//  font-family: Arial, sans-serif
+//  font-size: 12px
+//  line-height: 1.4
+=npr
+  font-family: "nautilus_pompiliusregular"
+  font-weight: normal
+  font-style: normal
+=rl
+  font-family: "robotolight"
+  font-weight: normal
+  font-style: normal
+=rr
+  font-family: "robotoregular"
+  font-weight: normal
+  font-style: normal
+=rb
+  font-family: "robotobold"
+  font-weight: normal
+  font-style: normal
+=rm
+  font-family: "robotomedium"
+  font-weight: normal
+  font-style: normal
+
+.counter
+  width: 285px
+  margin: auto auto 0
+  display: block
+  text-align: center
+
+  p
+    color: #ffffff
+    margin-bottom: 5px
+    margin-top: 3px
+    font-size: 14px
+    position: static
+    font-family: 'conv_segoeprintregular'
+
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    display: inline-block
+
+    li
+      float: left
+      margin: 0 4px
+      text-align: center
+      position: relative
+
+      span
+        position: relative
+        +text-shadow(1px 1px 1px rgb(0, 0, 0))
+        display: block
+        font-size: 36px
+        padding-top: 11px
+        padding-right: 3px
+        width: 60px
+        height: 60px
+        font-family: 'bebas_neuebold'
+        color: white
+        +border-radius(8px)
+        +background-clip(padding-box)
+        background-color: #1d1d1d
+        +box-shadow(inset 0 -4px 0 rgba(0,0,0,.6))
+        +background-image(linear-gradient(to bottom, #595959 0%, #777 42%, #131313 59%, #595959 100%))
+        &:after
+          position: absolute
+          content: ""
+          top: 32px
+          left: 0
+          width: 100%
+          height: 5px
+          +opacity(.7)
+          +background-image(linear-gradient(bottom, #000 0%, rgba(0,0,0,0) 100%))
+          +box
+
+
+
+.form
+  width: 370px
+  height: 460px
+  margin-top: 20px
+  +border-radius(20px)
+  +background-clip(padding-box)
+
+  .caption
+    box-sizing: border-box
+    height: 110px
+    padding-top: 20px
+    +border-radius(8px 8px 0 0)
+    +background-clip(padding-box)
+    +background-image(linear-gradient(to left, #ff3b27 0%, #bd0909 100%))
+
+
+    h3
+      margin-top: 0
+      margin-bottom: 0
+      font-size: 36px
+      font-weight: normal
+      text-align: center
+      font-family: 'Conv_pfdintextcondpro-light'
+      color: #ffffff
+      line-height: 1em
+    h4
+      margin-top: 0
+      margin-bottom: 15px
+      font-size: 24px
+      text-align: center
+      font-weight: normal
+      font-family: 'Conv_pfdintextcondpro-light'
+      color: #ffffff
+      span
+        font-family: 'conv_pfdintextcondpro-bold'
+
+.frm
+  height: 355px
+  padding-top: 10px
+  +border-radius(0 0 8px 8px)
+  +background-clip(padding-box)
+  background: rgba(#1d1d1d, .7)
+  //box-sizing: border-box
+  margin-top: 5px
+  padding-bottom: 5px
+
+
+  form
+    margin-top: 10px
+    input
+      padding-left: 25px
+      width: 290px
+      height: 50px
+      background: #ffffff
+      display: block
+      margin: auto auto 10px
+      +border-radius(4px)
+      +background-clip(padding-box)
+      +box
+      font-size: 18px
+
+    .button
+      +box
+      +border-radius(10px)
+      padding: 0 94px
+      height: 70px
+      color: #000000
+      +single-text-shadow
+      display: block
+      margin: 10px auto auto
+      font-family: 'archiveregular'
+      font-size: 24px
+      text-transform: uppercase
+      +background-clip(padding-box)
+      +border-radius(8px)
+      letter-spacing: 1px
+      +box-shadow(inset 0 -4px 0 rgba(210, 121, 8, 0.90))
+      +background-image(linear-gradient(to bottom, #fff5af 0%, #f9b309 100%))
+      &:hover
+        +background-image(linear-gradient(to bottom, #f9b309 0%, #fff5af 100%))
+
+  h4
+    text-align: center
+    color: #ffffff
+    margin: 5px 0 0
+    font-weight: normal
+    font-family: 'Conv_pfdintextcondpro-light'
+    font-size: 18px
+  h5
+    @extend h4
+    margin: 0
+    font-size: 24px
+    span
+      font-family: 'conv_pfdintextcondpro-regular'
+
+// common blocks      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
