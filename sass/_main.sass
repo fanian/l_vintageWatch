@@ -47,12 +47,11 @@ input, textarea
   +border-radius(24px)
   background-color: #8fb377
   +box-shadow(0 2px 0 #74965f, inset 0 -1px 0 rgba(255,255,255,.16))
-  +background-image(linear-gradient(to bottom, rgba(#000, .2) 0%, rgba(#fff ,.2) 100%))
+  +background-image(linear-gradient(to bottom, rgba(#fff, .2) 0%, rgba(#000 ,.2) 100%))
   +single-text-shadow()
 
   &:hover
-    color: #fff
-    background-color: lighten(#8fb377, 10%)
+    background-color: lighten(#8fb377, 5%)
 .title
   text-align: center
   font-size: 44px
@@ -256,10 +255,208 @@ header
     margin-top: 40px
     background: url(../img/order_form_bg.png) center center no-repeat
     height: 136px
-    .form__button
+    +box
+    padding-top: 40px
+    .button_out
       float: left
-      margin-top: 40px
       margin-left: 120px
+      +border-radius(34px)
+      +background-clip(padding-box)
+      background-color: #cf8c57
+      +box-shadow(inset 0 -1px 0 rgba(255,255,255,.16))
+      +background-image(linear-gradient(bottom, rgba(255,255,255,.13) 0%, rgba(0,0,0,.13) 100%))
+      padding: 5px
+      .form__button
+        +border-radius(28px 28px 28px / 29px 29px 29px 29px)
+        background-color: #89ad71
+        &:hover
+          background-color: lighten(#8fb377, 5%)
+    .counter
+      margin-right: 120px
+.about
+  margin-top: 40px
+  +clr
+  .about_in
+    @extend %in
+    +clr
+  .about__img
+    float: left
+    margin-left: -30px
+    +clr
+  .about__text
+    margin-top: 70px
+    float: right
+    font-size: 16px
+    color: #4e4c4a
+    width: 560px
+    +rl
+    +clr
+    p
+      margin-bottom: 10px
+    span
+      +npr
+      font-size: 32px
+      line-height: 1em
+  .about__bottom
+    +clr
+    padding-top: 10px
+    clear: both
+
+
+.features
+  padding-top: 50px
+  .features_in
+    margin-top: 70px
+    @extend %in
+    +clr
+  .title--main
+    font-size: 45px
+    position: relative
+    display: inline-block
+    left: 50%
+    color: #4e4c4a
+    +transform(translate(-50%))
+    &:before
+      position: absolute
+      content: ""
+      +s(title_left)
+      top: 15px
+      left: -60px
+    &:after
+      position: absolute
+      content: ""
+      +s(title_right)
+      top: 15px
+      right: -60px
+  .items
+    +clr
+    float: left
+    width: 260px
+    text-align: right
+    color: #4e4c4a
+    margin-left: 60px
+    .item
+      position: relative
+      margin-bottom: 60px
+      &:after
+        position: absolute
+        content: ""
+        +s(ltop)
+        top: 45px
+        right: -100px
+      h3
+        +rb
+        font-size: 20px
+        margin-bottom: 5px
+      h4
+        +rl
+        font-size: 15px
+      &.item--center
+        margin-right: 35px
+        &:after
+          position: absolute
+          content: ""
+          +s(lcenter)
+          top: 55px
+          right: -85px
+      &.item--bottom
+        &:after
+          position: absolute
+          content: ""
+          +s(lbottom)
+          top: 10px
+          right: -105px
+
+  .items--right
+    +clr
+    float: right
+    text-align: left
+    margin-left: 0
+    margin-right: 10px
+    width: 290px
+    .item--wide
+      margin-bottom: 35px
+
+
+    .item
+      &:after
+        left: -100px
+        top: 30px
+        +s(rtop)
+      &.item--center
+        margin-right: 0 !important
+        margin-left: 35px
+        &:after
+          +s(rcenter)
+          left: -80px
+      &.item--bottom
+        &:after
+          top: -13px
+          left: -105px
+          +s(rbottom)
+  .feature__watch
+    margin-top: 100px
+    float: left
+    margin-left: 65px
+
+.buy
+  background: url(../img/buy_bg.jpg) center no-repeat
+  +background-size(cover)
+  height: 754px
+  .buy_in
+    @extend %in
+    padding-top: 140px
+  .buy__item
+    width: 308px
+    height: 516px
+    +box
+    +border-radius(5px)
+    background: #ffffff
+    .buy__img
+      position: relative
+      width: 231px
+      height: 231px
+      margin: -60px auto 0
+      img
+        +border-radius(50%)
+        width: 100%
+        height: auto
+    .item__caption
+      width: 270px
+      margin: 0 auto
+      display: table
+      +clr
+      .item__caption--left
+        +clr
+        float: left
+        text-align: right
+        width: 120px
+        line-height: 1.1em
+        +npr
+        font-size: 20px
+      .item__caption--right
+        +clr
+        float: left
+        margin-left: 20px
+      .item__caption--right-top
+        +rm
+        font-size: 19px
+        color: #b4afab
+        text-decoration: line-through
+        span
+          font-size: 14px
+          +rr
+      .item__caption--right-bottom
+        +rb
+        font-size: 32px
+        color: #7c9d67
+        span
+          font-size: 20px
+
+
+
+
+
 
 
 
