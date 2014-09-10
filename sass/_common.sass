@@ -131,85 +131,37 @@
 
 
 .form
-  width: 370px
-  height: 460px
-  margin-top: 20px
-  +border-radius(20px)
-  +background-clip(padding-box)
-
-  .caption
-    box-sizing: border-box
-    height: 110px
-    padding-top: 20px
-    +border-radius(8px 8px 0 0)
-    +background-clip(padding-box)
-    +background-image(linear-gradient(to left, #ff3b27 0%, #bd0909 100%))
-
-
-    h3
-      margin-top: 0
-      margin-bottom: 0
-      font-size: 36px
-      font-weight: normal
-      text-align: center
-      font-family: 'Conv_pfdintextcondpro-light'
-      color: #ffffff
-      line-height: 1em
-    h4
-      margin-top: 0
-      margin-bottom: 15px
-      font-size: 24px
-      text-align: center
-      font-weight: normal
-      font-family: 'Conv_pfdintextcondpro-light'
-      color: #ffffff
-      span
-        font-family: 'conv_pfdintextcondpro-bold'
-
-.frm
-  height: 355px
-  padding-top: 10px
-  +border-radius(0 0 8px 8px)
-  +background-clip(padding-box)
-  background: rgba(#1d1d1d, .7)
-  //box-sizing: border-box
-  margin-top: 5px
-  padding-bottom: 5px
-
+  margin: 0 auto
 
   form
     margin-top: 10px
     input
-      padding-left: 25px
-      width: 290px
-      height: 50px
-      background: #ffffff
-      display: block
-      margin: auto auto 10px
+      margin-bottom: 15px
+      font-size: 14px
       +border-radius(4px)
       +background-clip(padding-box)
+      +box-shadow(inset 0 0 3px rgba(0,0,0,.29))
+      background-color: #fff
+      +background-image(linear-gradient(to bottom, rgba(255,255,255,.09) 129.65%, rgba(0,0,0,.09) 205.65%))
+      padding-left: 29px
+      width: 262px
+      padding-top: 10px
+      padding-bottom: 10px
       +box
-      font-size: 18px
+      &.name
+        background: url(../img/man.png) no-repeat 10px 13px
+      &.phone
+        background: url(../img/call.png) no-repeat 10px 13px
 
     .button
-      +box
-      +border-radius(10px)
-      padding: 0 94px
-      height: 70px
-      color: #000000
-      +single-text-shadow
-      display: block
-      margin: 10px auto auto
-      font-family: 'archiveregular'
-      font-size: 24px
-      text-transform: uppercase
-      +background-clip(padding-box)
-      +border-radius(8px)
-      letter-spacing: 1px
-      +box-shadow(inset 0 -4px 0 rgba(210, 121, 8, 0.90))
-      +background-image(linear-gradient(to bottom, #fff5af 0%, #f9b309 100%))
+      padding: 10px 45px
+      background-color: #d78345
+      margin-top: 15px
+      +box-shadow(0 2px 0 #b56a39, inset 0 -1px 0 rgba(255,255,255,.16))
+      +background-image(linear-gradient(to bottom, rgba(255,255,255,.2) 0%, rgba(0,0,0,.2) 100%))
       &:hover
-        +background-image(linear-gradient(to bottom, #f9b309 0%, #fff5af 100%))
+        background-color: lighten(#d78345, 5%)
+
 
   h4
     text-align: center

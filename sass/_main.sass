@@ -22,8 +22,8 @@ body
   position: relative
 input, textarea
   +placeholder
-    font-size: 18px
-    color: #5a5a5a
+    font-size: 11px
+    color: #a8a8a8
     +rl
 %in
   max-width: 1200px
@@ -228,6 +228,7 @@ header
       .box__price--old
         float: left
         .box__price--old__top
+          position: relative
           color: #7f7870
           font-size: 20px
           height: 40px
@@ -236,7 +237,14 @@ header
           padding: 5px 0
           text-align: center
           +box
-          text-decoration: line-through
+          &:before
+            position: absolute
+            content: ""
+            border-bottom: 1px solid
+            height: 0
+            left: 20px
+            top: 20px
+            right: 20px
           span
             font-size: 14.5px
 
@@ -403,28 +411,37 @@ header
   background: url(../img/buy_bg.jpg) center no-repeat
   +background-size(cover)
   height: 754px
+  +clr
   .buy_in
     @extend %in
     padding-top: 140px
+    +clr
   .buy__item
     width: 308px
     height: 516px
     +box
     +border-radius(5px)
     background: #ffffff
+    display: inline-block
+    margin-right: 30px
+    vertical-align: top
+    +box-shadow(0 22px 40px -22px #000000)
+    &:last-child
+      margin-right: 0
     .buy__img
       position: relative
       width: 231px
       height: 231px
-      margin: -60px auto 0
+      margin: 0 auto
+      top: -60px
       img
         +border-radius(50%)
         width: 100%
-        height: auto
+        height: 231px
     .item__caption
       width: 270px
-      margin: 0 auto
       display: table
+      margin: -40px auto 0
       +clr
       .item__caption--left
         +clr
@@ -439,10 +456,20 @@ header
         float: left
         margin-left: 20px
       .item__caption--right-top
+        position: relative
         +rm
         font-size: 19px
         color: #b4afab
-        text-decoration: line-through
+        +clr
+
+        &:before
+          position: absolute
+          content: ""
+          border-bottom: 1px solid
+          height: 0
+          left: -2px
+          top: 14px
+          right: 48px
         span
           font-size: 14px
           +rr
@@ -450,9 +477,223 @@ header
         +rb
         font-size: 32px
         color: #7c9d67
+        +clr
         span
           font-size: 20px
+      .item__caption__nomenclature
+        color: #c7c7c7
+        font-size: 13px
+        clear: both
+        text-align: center
+        margin-top: 75px
+      .item__caption__border
+        display: table
+        margin: 0 auto
 
+    .item__form
+      @extend .form
+      width: 262px
+
+.why
+  padding-top: 95px
+  +box
+  +clr
+  .why_in
+    @extend %in
+    +clr
+  .title--main
+    font-size: 45px
+    position: relative
+    display: inline-block
+    left: 50%
+    color: #4e4c4a
+    +transform(translate(-50%))
+    margin-bottom: 45px
+    &:before
+      position: absolute
+      content: ""
+      +s(title_left)
+      top: 15px
+      left: -60px
+    &:after
+      position: absolute
+      content: ""
+      +s(title_right)
+      top: 15px
+      right: -60px
+  .why__item
+    width: 290px
+    display: inline-block
+    text-align: center
+    vertical-align: top
+    margin-right: 60px
+    &:last-child
+      margin-right: 0
+    .why__img
+      margin-bottom: 25px
+      width: 95px
+      height: 95px
+      +border-radius(50%)
+      background: #eef4eb
+      display: inline-block
+      .vertical-centered
+        display: inline-block
+        height: 100%
+        vertical-align: middle
+      img
+        vertical-align: middle
+
+    h3
+      +rb
+      font-size: 20px
+      color: #4e4c4a
+      margin-bottom: 10px
+    p
+      +rl
+      font-size: 15px
+      color: #4e4c4a
+
+
+
+.delivery
+  padding-top: 20px
+  +clr
+  +box
+  .title--main
+    font-size: 45px
+    position: relative
+    top: 75px
+    padding: 0 20px
+    background: #ffffff
+    display: inline-block
+    left: 50%
+    color: #4e4c4a
+    +transform(translate(-50%))
+    margin-bottom: 45px
+  .delivery_in
+    @extend %in
+    +clr
+    border-top: 2px dashed rgb(228,228,228)
+    border-bottom: 2px dashed rgb(228,228,228)
+    padding-bottom: 40px
+  .title__waves
+    font-size: 22px
+    color: #4e4c4a
+    padding: 0 15px
+    margin-bottom: 10px
+    top: 0
+    margin-top: 20px
+    &.title--top
+      margin-top: 70px
+    +rb
+    &:before
+      position: absolute
+      content: ""
+      +s(green_wave)
+      top: 10px
+      left: -130px
+    &:after
+      position: absolute
+      content: ""
+      +s(green_wave)
+      top: 10px
+      right: -130px
+  p
+    font-size: 15px
+    color: #4e4c4a
+    text-align: center
+    margin-bottom: 10px
+
+.reviews
+  background: url(../img/reviews_bg.jpg) center no-repeat
+  +background-size(cover)
+  height: 484px
+  margin-top: 120px
+  padding-top: 60px
+  +box
+  +clr
+  .reviews_in
+    @extend %in
+    +clr
+    position: relative
+  .title--main
+    font-size: 45px
+    position: relative
+    display: inline-block
+    left: 50%
+    color: #ffffff
+    +transform(translate(-50%))
+    margin-bottom: 45px
+    &:after
+      position: absolute
+      content: ""
+      background: url(../img/reviews_popup.png) left no-repeat
+      width: 119px
+      height: 103px
+      top: -15px
+      right: -50px
+  .items
+    margin-top: 20px
+    +clr
+    .item
+      width: 471px
+      height: 175px
+      vertical-align: top
+      background: #ffffff
+      +border-radius(5px)
+      display: inline-block
+      +box
+      +clr
+      +box-shadow(0 22px 40px -22px #000000)
+      margin-right: 50px
+      &:last-child
+        margin-right: 0
+      .item__img
+        position: relative
+        float: left
+        margin-left: -2px
+
+        img
+          +border-radius(5px)
+      .item__text
+        width: 240px
+        display: inline-block
+        padding: 25px
+        h3
+          +rm
+          font-size: 18px
+        h4
+          +rl
+          font-size: 12px
+          margin-bottom: 10px
+        p
+          +rl
+          font-size: 14px
+
+
+
+.customPager
+  text-align: center
+  width: 100%
+  z-index: 500
+  position: absolute
+  top: 230px
+  overflow: hidden
+
+  span
+    font-family: arial
+    font-size: 36px
+    width: 9px
+    height: 9px
+    display: inline-block
+    border: #ffffff 1px solid
+    cursor: pointer
+    vertical-align: middle
+    +border-radius(50%)
+    margin-right: 9px
+
+    &.cycle-pager-active
+      background: #ffffff
 
 
 
