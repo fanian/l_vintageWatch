@@ -26,7 +26,7 @@
             </nav>
             <div class="top__phone">
                 <h2>+7 (499) <span>390-53-63</span></h2>
-                <a href="#" class="callme">Заказать звонок</a>
+                <a href="#callback" class="fancybox callme">Заказать звонок</a>
             </div>
             <span class="top__nomenclature">
                 Артикул товара<br />
@@ -400,7 +400,7 @@
             <div class="order__caption">
                 <div class="caption--left">
                     <h3>Начните пользоваться винтажными часами
-                        прямосейчас, по Акции!</h3>
+                        прямо сейчас, по Акции!</h3>
                     <h4>
                         Просто оставьте заявку и мы отложим Вам часы!</h4>
                 </div>
@@ -416,7 +416,7 @@
 
             </div>
             <div class="order__form">
-                <div class="button_out"><a href="#" class="btn form__button">Заказать сейчас!</a></div>
+                <div class="button_out"><a href="#orderNow" class="fancybox btn form__button">Заказать сейчас!</a></div>
                 <div class="counter">
 
                     <ul class="count_line">
@@ -458,12 +458,54 @@
     </div>
     <div class="footer__callme">Не дозвонились?<br />Закажите обратный звонок!</div>
     <div class="footer__phone">8 800 <span>555 44 33</span><br />
-        <a class="callme" href="#">Заказать звонок</a></div>
+        <a class="callme fancybox--thanks" href="#thanks">Заказать звонок</a></div>
 </div>
 </footer>
 </div>
 </div>
 <!-- END out-->
+<div id = "callback" class="callback form" style="display:none;">
+    <h2 class="title">Заказать звонок</h2>
+    <div class="form__border"><img src="img/caption_border_img.jpg" alt="border"/></div>
+    <form action="#" method="post" id="form4">
+        <input type="text" name="name" class="name required" placeholder="Ваше имя">
+        <input type="text" name="phone" class="phone required" placeholder="Ваш телефон">
+        <button class="btn button">Заказать товар!</button>
+    </form>
+</div>
+<div id = "orderNow" class="orderNow callback form" style="display:none;">
+    <h2 class="title">Заказать товар</h2>
+    <div class="form__border"><img src="img/caption_border_img.jpg" alt="border"/></div>
+    <form action="#" method="post" id="form5">
+        <input type="text" name="name" class="name required" placeholder="Ваше имя">
+        <input type="text" name="phone" class="phone required" placeholder="Ваш телефон">
+        <select>
+            <option value="" disabled selected>Цвет часов</option>
+            <option value="" disabled>-------------</option>
+            <option value="orange">Оранжевый</option>
+            <option value="blue">Синий</option>
+            <option value="green">Зеленый</option>
+        </select>
+        <button class="btn button">Заказать товар!</button>
+    </form>
+</div>
+<div id = "thanks" class="thanks" style="display: none;">
+    <div class="thanks__top"></div>
+    <div class="thanks__main">
+        <div class="thanks__img">
+            <span class="vertical-centered"></span>
+            <img src="img/thanks_img.png" alt="smile"/>
+        </div>
+
+        <h2 class="title">Спасибо!</h2>
+        <h3 class="title">Ваша заявка успешно принята</h3>
+        <p>Через некоторое время с вами свяжется
+            наш менеджер</p>
+    </div>
+
+</div>
+
+<a class="thanks-link fancybox--thanks" href="#thanks"></a>
 
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>

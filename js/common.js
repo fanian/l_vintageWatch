@@ -38,21 +38,36 @@ head.ready(function() {
 
 
 //
-//    $('.fancybox').fancybox({
-//        padding: 0,
-//        helpers: {
-//            overlay: {
-//                locked: false
-//            }
-//        },
-//        tpl: {
-//            closeBtn: '<div class="myFancyClose"></div>'
-//        },
-//        beforeShow: function(){
-//            $(".fancybox-skin").css("backgroundColor","transparent");
-//            $(".fancybox-skin").css("boxShadow","none");
-//        }
-//    });
+    $('.fancybox').fancybox({
+        padding: 0,
+        helpers: {
+            overlay: {
+                locked: false
+            }
+        },
+        tpl: {
+            closeBtn: '<div class="myFancyClose"></div>'
+        },
+        beforeShow: function(){
+            $(".fancybox-skin").css("backgroundColor","transparent");
+            $(".fancybox-skin").css("boxShadow","none");
+        }
+    });
+    $('.fancybox--thanks').fancybox({
+        padding: 0,
+        helpers: {
+            overlay: {
+                locked: false
+            }
+        },
+        tpl: {
+            closeBtn: '<div class="myFancyClose--thanks"></div>'
+        },
+        beforeShow: function(){
+            $(".fancybox-skin").css("backgroundColor","transparent");
+            $(".fancybox-skin").css("boxShadow","none");
+        }
+    });
 //////////////////////without close button
 
 //////////////////////////////////////////////////
