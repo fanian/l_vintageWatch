@@ -18,7 +18,7 @@
         <div class="top_in">
             <nav>
                 <ul class="js-nav">
-                    <li><a href="#first">О товаре</a></li>
+                    <li><a href="#about">О товаре</a></li>
                     <li><a href="#guaranty">Гарантия</a></li>
                     <li><a href="#delivery">Оплата и доставка</a></li>
                     <li><a href="#reviews">Отзывы</a></li>
@@ -35,7 +35,7 @@
 
         </div>
     </div>
-<header>
+<span id="about" class="section"></span><header>
 <div class="header_in">
     <div class="header__left"><img src="img/watch.png" alt="watch"/></div>
     <div class="header__right">
@@ -43,7 +43,7 @@
             винтажные часы</h1>
         <h3>на плетенном кожаном ремешке,
             с брелоком в виде совы</h3>
-        <a class="btn" href="#">Заказать</a>
+        <a class="fancybox btn" href="#orderNow">Заказать</a>
     </div>
 </div>
 
@@ -72,7 +72,7 @@
 
         </div>
         <div class="order__form">
-               <div class="button_out"><a href="#" class="btn form__button">Заказать сейчас!</a></div>
+               <div class="button_out"><a href="#orderNow" class="fancybox btn form__button">Заказать сейчас!</a></div>
             <div class="counter">
 
                 <ul class="count_line">
@@ -244,7 +244,7 @@
         </div>
     </div>
 </div>
-<div class="why">
+<span id="guaranty" class="section"></span><div class="why">
     <h2 class="title title--main">Почему стоит выбрать нас</h2>
     <div class="why_in">
         <div class="why__item">
@@ -272,7 +272,7 @@
 </div>
 
 
-<div class="delivery">
+<span id="delivery" class="section"></span><div class="delivery">
     <h2 class="title title--main">Оплата и доставка</h2>
     <div class="delivery_in">
           <h3 class="title title--main title__waves title--top">Оплата</h3>
@@ -291,7 +291,7 @@
     </div>
 
 </div>
-<div class="reviews">
+<span id="reviews" class="section"></span><div class="reviews">
     <h2 class="title title--main">Отзывы</h2>
     <div class="reviews_in">
         <span class="customPager"></span>
@@ -458,7 +458,7 @@
     </div>
     <div class="footer__callme">Не дозвонились?<br />Закажите обратный звонок!</div>
     <div class="footer__phone">8 800 <span>555 44 33</span><br />
-        <a class="callme fancybox--thanks" href="#thanks">Заказать звонок</a></div>
+        <a class="callme fancybox" href="#callback">Заказать звонок</a></div>
 </div>
 </footer>
 </div>
@@ -479,7 +479,7 @@
     <form action="#" method="post" id="form5">
         <input type="text" name="name" class="name required" placeholder="Ваше имя">
         <input type="text" name="phone" class="phone required" placeholder="Ваш телефон">
-        <select>
+        <select class="required">
             <option value="" disabled selected>Цвет часов</option>
             <option value="" disabled>-------------</option>
             <option value="orange">Оранжевый</option>
@@ -499,7 +499,7 @@
 
         <h2 class="title">Спасибо!</h2>
         <h3 class="title">Ваша заявка успешно принята</h3>
-        <p>Через некоторое время с вами свяжется
+        <p>Через некоторое время с вами свяжется<br />
             наш менеджер</p>
     </div>
 

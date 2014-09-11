@@ -32,9 +32,52 @@ head.ready(function() {
 //
 //    });
 
-    $('#frm-first form').validate();
-    $('#frm-second form').validate();
+    $('#form1').validate();
+    $('#form2').validate();
+    $('#form3').validate();
+    $('#form4').validate();
+    $('#form5').validate();
 
+    $("#form1").ajaxForm({
+        success: function () {
+            $(".thanks-link").trigger('click');
+        },
+        data: {
+            title: 'Спасибо!'
+        }
+    });
+    $("#form2").ajaxForm({
+        success: function () {
+            $(".thanks-link").trigger('click');
+        },
+        data: {
+            title: 'Спасибо!'
+        }
+    });
+    $("#form3").ajaxForm({
+        success: function () {
+            $(".thanks-link").trigger('click');
+        },
+        data: {
+            title: 'Спасибо!'
+        }
+    });
+    $("#form4").ajaxForm({
+        success: function () {
+            $(".thanks-link").trigger('click');
+        },
+        data: {
+            title: 'Спасибо!'
+        }
+    });
+    $("#form5").ajaxForm({
+        success: function () {
+            $(".thanks-link").trigger('click');
+        },
+        data: {
+            title: 'Спасибо!'
+        }
+    });
 
 
 //
@@ -120,14 +163,14 @@ head.ready(function() {
             var id = $(this).attr('id');
             var top = ($('.page').offset().top - 80);
             if( $(window).scrollTop() >= (pos - 79)){
-                //$('.js-nav li').removeClass('is-active');
-                $('.js-nav li a').removeClass('is-active');
-                //$('[href = #'+id+']').parent().addClass('is-active');
-                $('[href = #'+id+']').addClass('is-active');
+                $('.js-nav li').removeClass('is-active');
+                //$('.js-nav li a').removeClass('is-active');
+                $('[href = #'+id+']').parent().addClass('is-active');
+                //$('[href = #'+id+']').addClass('is-active');
             }
             if($(window).scrollTop() < top){
-                //$('.js-nav li').removeClass('is-active');
-                $('.js-nav li a').removeClass('is-active');
+                $('.js-nav li').removeClass('is-active');
+                //$('.js-nav li a').removeClass('is-active');
 
             }
         });

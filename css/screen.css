@@ -46,7 +46,7 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 .l2 { float: right; width: 300px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-input.error, textarea.error { box-shadow: inset 0 0 10px red !important; }
+input.error, textarea.error, select.error { box-shadow: inset 0 0 10px red !important; }
 
 label.error { display: none !important; }
 
@@ -74,7 +74,7 @@ input::placeholder, textarea::placeholder { font-size: 11px; color: #a8a8a8; fon
 .title { text-align: center; font-size: 44px; font-family: "nautilus_pompiliusregular"; font-weight: normal; font-style: normal; line-height: 1.3em; color: #5a534f; }
 .title span { font-family: "bebas_neuebold"; text-transform: uppercase; color: #be0a0a; font-size: 72px; }
 
-.top { background: #ffffff; height: 105px; }
+.top { background: #ffffff; height: 105px; position: fixed; top: 0; left: 0; width: 100%; bottom: auto; z-index: 999; }
 .top .top_in { *zoom: 1; padding-top: 35px; }
 .top .top_in:after { content: " "; display: table; clear: both; }
 .top nav { float: left; margin-left: -20px; }
@@ -92,7 +92,7 @@ input::placeholder, textarea::placeholder { font-size: 11px; color: #a8a8a8; fon
 .top .top__phone .callme:hover { border-bottom: none; }
 .top .top__nomenclature { float: right; font-size: 13px; color: #809175; text-align: center; background-color: #eff3eb; padding: 5px 20px; }
 
-header, .scrollMenu { background: url(../img/header_bg.png) center no-repeat; -moz-background-size: cover; -o-background-size: cover; -webkit-background-size: cover; background-size: cover; height: 468px; position: relative; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+header, .scrollMenu { margin-top: 105px; background: url(../img/header_bg.png) center no-repeat; -moz-background-size: cover; -o-background-size: cover; -webkit-background-size: cover; background-size: cover; height: 468px; position: relative; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 header .header_in, .scrollMenu .header_in { *zoom: 1; position: relative; }
 header .header_in:after, .scrollMenu .header_in:after { content: " "; display: table; clear: both; }
 header .header_in .header__left, .scrollMenu .header_in .header__left { margin-top: 85px; margin-right: 75px; position: relative; float: left; *zoom: 1; }
@@ -268,7 +268,8 @@ footer .footer__phone .callme:hover { border-bottom: none; }
 .thanks .thanks__top { background: transparent; height: 45px; }
 .thanks .thanks__main { height: 237px; background: #ffffff; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
 .thanks .thanks__img { position: relative; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; -moz-background-clip: padding; -o-background-clip: padding-box; -webkit-background-clip: padding; background-clip: padding-box; background-color: #8fb377; width: 90px; height: 90px; display: inline-block; top: -45px; }
-.thanks .thanks__img .vertical-centered { height: 100%; vertical-align: middle; }
+.thanks .thanks__img .vertical-centered { height: 100%; vertical-align: middle; display: inline-block; }
 .thanks .thanks__img img { vertical-align: middle; }
-.thanks h2 { font-size: 49px; line-height: 1em; }
-.thanks h3 { font-size: 29px; line-height: 1em; }
+.thanks h2 { font-size: 49px; line-height: 1em; color: #4e4c4a; margin-top: -20px; }
+.thanks h3 { font-size: 29px; line-height: 1em; color: #4e4c4a; margin-bottom: 20px; }
+.thanks p { font-family: "robotolight"; font-weight: normal; font-style: normal; font-size: 16px; color: #5a5242; }

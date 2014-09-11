@@ -2,7 +2,7 @@
 //+font('Conv_SegoePrintRegular', 'SegoePrintRegular')
 
 
-input.error, textarea.error
+input.error, textarea.error, select.error
   box-shadow: inset 0 0 10px red !important
 label.error
   display: none !important
@@ -72,6 +72,12 @@ input, textarea
 .top
   background: #ffffff
   height: 105px
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  bottom: auto
+  z-index: 999
   .top_in
     @extend %in
     +clr
@@ -144,6 +150,7 @@ input, textarea
     padding: 5px 20px
 
 header
+  margin-top: 105px
   background: url(../img/header_bg.png) center no-repeat
   +background-size(cover)
   height: 468px
@@ -865,7 +872,14 @@ footer
     font-size: 49px
     line-height: 1em
     color: #4e4c4a
+    margin-top: -20px
+
   h3
     font-size: 29px
     line-height: 1em
     color: #4e4c4a
+    margin-bottom: 20px
+  p
+    +rl
+    font-size: 16px
+    color: #5a5242
