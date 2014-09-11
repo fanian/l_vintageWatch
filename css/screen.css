@@ -79,10 +79,11 @@ input::placeholder, textarea::placeholder { font-size: 11px; color: #a8a8a8; fon
 .top .top_in:after { content: " "; display: table; clear: both; }
 .top nav { float: left; margin-left: -20px; }
 .top nav ul { font-size: 15px; padding: 0; }
-.top nav ul li { display: inline-block; float: left; color: #3c3c3c; font-family: "robotolight"; font-weight: normal; font-style: normal; line-height: 1em; padding: 0; border: 3px solid rgba(255, 255, 255, 0); }
+.top nav ul li { display: inline-block; float: left; color: #3c3c3c; font-family: "robotolight"; font-weight: normal; font-style: normal; line-height: 1em; padding: 0; border: 3px solid rgba(255, 255, 255, 0); margin-right: 3px; }
+.top nav ul li:last-child { margin-right: 0; }
 .top nav ul li:hover { color: #d88345; border: 3px solid #d78345; -moz-border-radius: 19px; -webkit-border-radius: 19px; border-radius: 19px; -moz-background-clip: padding; -o-background-clip: padding-box; -webkit-background-clip: padding; background-clip: padding-box; }
 .top nav ul li.is-active { color: #d88345; border: 3px solid #d78345; -moz-border-radius: 19px; -webkit-border-radius: 19px; border-radius: 19px; -moz-background-clip: padding; -o-background-clip: padding-box; -webkit-background-clip: padding; background-clip: padding-box; }
-.top nav ul li a { display: block; text-decoration: none; color: inherit; padding: 8px 20px; }
+.top nav ul li a { display: block; text-decoration: none; color: inherit; padding: 8px 18px; }
 .top .top__phone { float: left; text-align: right; margin-left: 155px; *zoom: 1; }
 .top .top__phone:after { content: " "; display: table; clear: both; }
 .top .top__phone h2 { font-size: 24px; color: #3c3c3c; margin: 0; line-height: 1em; font-family: "robotolight"; font-weight: normal; font-style: normal; position: relative; }
