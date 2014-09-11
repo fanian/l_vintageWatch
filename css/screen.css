@@ -62,7 +62,7 @@ input::-moz-placeholder, textarea::-moz-placeholder { font-size: 11px; color: #a
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { font-size: 11px; color: #a8a8a8; font-family: "robotolight"; font-weight: normal; font-style: normal; }
 input::placeholder, textarea::placeholder { font-size: 11px; color: #a8a8a8; font-family: "robotolight"; font-weight: normal; font-style: normal; }
 
-.top .top_in, header .header_in, .scrollMenu .header_in, .order .order_in, .about .about_in, .features .features_in, .buy .buy_in, .why .why_in, .delivery .delivery_in, .reviews .reviews_in { max-width: 1200px; width: 1000px; margin-left: auto; margin-right: auto; }
+.top .top_in, header .header_in, .scrollMenu .header_in, .order .order_in, .about .about_in, .features .features_in, .buy .buy_in, .why .why_in, .delivery .delivery_in, .reviews .reviews_in, footer .footer_in { max-width: 1200px; width: 1000px; margin-left: auto; margin-right: auto; }
 
 .myFancyClose { position: absolute; top: -17px; right: -18px; }
 
@@ -240,3 +240,14 @@ header .header_in .header__right h3, .scrollMenu .header_in .header__right h3 { 
 .scrollMenu { position: fixed; z-index: 999; width: 100%; top: 0; left: 0; bottom: auto; display: none; height: 60px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; background: rgba(222, 233, 236, 0.8); }
 .scrollMenu .header_in { padding-top: 20px; }
 .scrollMenu .top { height: 0; }
+
+footer { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding-top: 24px; height: 107px; background: url(../img/footer_bg.png) center no-repeat; -moz-background-size: cover; -o-background-size: cover; -webkit-background-size: cover; background-size: cover; }
+footer .footer__questions { font-size: 15px; color: #ffffff; float: left; width: 350px; padding-top: 7px; font-family: "robotolight"; font-weight: normal; font-style: normal; }
+footer .footer__questions span { display: inline-block; vertical-align: middle; }
+footer .footer__questions .question__img { float: left; width: 58px; height: 58px; margin-right: 25px; }
+footer .footer__questions .question__img img { margin-top: -7px; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; -moz-box-shadow: 0 22px 40px -17px #000000; -webkit-box-shadow: 0 22px 40px -17px #000000; box-shadow: 0 22px 40px -17px #000000; }
+footer .footer__callme { font-size: 15px; color: #ffffff; float: left; text-align: right; padding-right: 20px; margin-left: 260px; width: 200px; margin-top: 7px; border-right: 1px solid rgba(255, 255, 255, 0.12); font-family: "robotolight"; font-weight: normal; font-style: normal; }
+footer .footer__phone { float: right; margin-top: 7px; font-family: "robotolight"; font-weight: normal; font-style: normal; font-size: 19px; color: #ffffff; line-height: 1em; }
+footer .footer__phone span { font-family: "robotomedium"; font-weight: normal; font-style: normal; }
+footer .footer__phone .callme { text-align: right; color: #7ba460; font-size: 13px; border-bottom: 1px dashed; text-decoration: none; }
+footer .footer__phone .callme:hover { border-bottom: none; }

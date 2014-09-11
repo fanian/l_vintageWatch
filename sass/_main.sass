@@ -723,10 +723,63 @@ header
 
 
 
-.bottom
-
 
 
 
 footer
+  +box
+  padding-top: 24px
+  height: 107px
+  background: url(../img/footer_bg.png) center no-repeat
+  +background-size(cover)
+  .footer_in
+    @extend %in
+  .footer__questions
+    font-size: 15px
+    color: #ffffff
+    float: left
+    width: 350px
+    padding-top: 7px
+
+    +rl
+    span
+      display: inline-block
+      vertical-align: middle
+    .question__img
+      float: left
+      width: 58px
+      height: 58px
+      margin-right: 25px
+      img
+        margin-top: -7px
+        +border-radius(50%)
+        +box-shadow(0 22px 40px -17px #000000)
+  .footer__callme
+    font-size: 15px
+    color: #ffffff
+    float: left
+    text-align: right
+    padding-right: 20px
+    margin-left: 260px
+    width: 200px
+    margin-top: 7px
+    border-right: 1px solid rgba(#fff, .12)
+    +rl
+  .footer__phone
+    float: right
+    margin-top: 7px
+    +rl
+    font-size: 19px
+    color: #ffffff
+    line-height: 1em
+    span
+      +rm
+    .callme
+      text-align: right
+      color: #7ba460
+      font-size: 13px
+      border-bottom: 1px dashed
+      text-decoration: none
+      &:hover
+        border-bottom: none
 
